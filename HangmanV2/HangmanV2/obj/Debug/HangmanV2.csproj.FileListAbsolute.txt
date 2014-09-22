@@ -1,0 +1,10 @@
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\HangmanV2.exe.config
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\obj\Debug\HangmanV2.csprojResolveAssemblyReference.cache
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\HangmanV2.exe
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\HangmanV2.pdb
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\EntityFramework.dll
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\EntityFramework.xml
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\obj\Debug\HangmanV2.exe
+C:\Users\anthonyjones\Documents\GitHub\HangmanV2\HangmanV2\HangmanV2\obj\Debug\HangmanV2.pdb
