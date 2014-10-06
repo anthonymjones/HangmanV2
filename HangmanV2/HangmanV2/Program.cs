@@ -12,8 +12,11 @@ namespace Hangman
         private static string returnString;
         static void Main(string[] args)
         {
+            Console.Title = "Hangman";
             //call the hangman function to start the game
             hangMan();
+            Console.ReadKey();
+
         }
         //create a function for the hangman game
         static void hangMan()
@@ -142,58 +145,58 @@ namespace Hangman
                 Console.WriteLine();
                 Console.WriteLine("I'm sorry, you lose. The word was " + wordtoGuess);
             }
-
+        }
             //game over
-            System.Threading.Thread.Sleep(1500);
-            if (won)
-            {
-                AddHighScore(lives);
-                DisplayHighScores();
-            }
-        }
-        static void AddHighScore(int playerScore)
-        {
-            //get the player name for high scores
-            Console.Write("Your name: ");
-            string playerName = Console.ReadLine();
+        //    System.Threading.Thread.Sleep(1500);
+        //    if (won)
+        //    {
+        //        AddHighScore(lives);
+        //        DisplayHighScores();
+        //    }
+        //}
+        //static void AddHighScore(int playerScore)
+        //{
+        //    //get the player name for high scores
+        //    Console.Write("Your name: ");
+        //    string playerName = Console.ReadLine();
 
-            //create a gateway to the database
-            AnthonyEntities db = new AnthonyEntities();
+        //    //create a gateway to the database
+        //    spAnthonyEntities db = new spAnthonyEntities();
 
-            //create a new highscore object
-            HighScore newHighScore = new HighScore();
-            newHighScore.DateCreated = DateTime.Now;
-            newHighScore.Game = "Hangman";
-            newHighScore.Name = playerName;
-            newHighScore.Score = playerScore;
+        //    //create a new highscore object
+        //    HighScore newHighScore = new HighScore();
+        //    newHighScore.DateCreated = DateTime.Now;
+        //    newHighScore.Game = "Hangman";
+        //    newHighScore.Name = playerName;
+        //    newHighScore.Score = playerScore;
 
-            //add to the database
-            db.HighScores.Add(newHighScore);
+        //    //add to the database
+        //    db.HighScores.Add(newHighScore);
 
-            //save our changes
-            db.SaveChanges();
-        }
-        static void DisplayHighScores()
-        {
-            Console.SetWindowSize(40, 30);
-            //clear the console
-            Console.Clear();
-            //Write the High Score Text
-            Console.WriteLine();
-            Console.WriteLine("         Hangman High Scores");
-            Console.WriteLine("    *****************************");
+        //    //save our changes
+        //    db.SaveChanges();
+        //}
+        //static void DisplayHighScores()
+        //{
+        //    Console.SetWindowSize(40, 30);
+        //    //clear the console
+        //    Console.Clear();
+        //    //Write the High Score Text
+        //    Console.WriteLine();
+        //    Console.WriteLine("         Hangman High Scores");
+        //    Console.WriteLine("    *****************************");
 
-            //create a new connection to the db
-            AnthonyEntities db = new AnthonyEntities();
-            //get the high score list
-            List<HighScore> highScoreList = db.HighScores.Where(x => x.Game == "Hangman").OrderByDescending(x => x.Score).Take(10).ToList();
+        //    //create a new connection to the db
+        //    spAnthonyEntities db = new spAnthonyEntities();
+        //    //get the high score list
+        //    List<HighScore> highScoreList = db.HighScores.Where(x => x.Game == "Hangman").OrderByDescending(x => x.Score).Take(10).ToList();
 
-            foreach (HighScore highScore in highScoreList)
-            {
-                Console.WriteLine("    {0}. {1} - {2} on {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.DateCreated.Value.ToShortDateString());
-            }
-            Console.ReadKey();
-        }
+        //    foreach (HighScore highScore in highScoreList)
+        //    {
+        //        Console.WriteLine("    {0}. {1} - {2} on {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.DateCreated.Value.ToShortDateString());
+        //    }
+        //    Console.ReadKey();
+        //}
         //create function for Display Masked Word
         static string maskedWord(string wordtoGuess, string lettersGuessed)
         {

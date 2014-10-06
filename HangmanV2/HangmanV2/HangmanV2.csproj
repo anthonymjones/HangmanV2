@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HighScore.cs">
-      <DependentUpon>HighScores.tt</DependentUpon>
+      <DependentUpon>HighScoresdb.tt</DependentUpon>
     </Compile>
     <Compile Include="HighScores.Context.cs">
       <AutoGen>True</AutoGen>
@@ -67,6 +67,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HighScores.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoresdb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HighScoresdb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoresdb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HighScoresdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoresdb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HighScoresdb.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +104,23 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HighScores.edmx</DependentUpon>
       <LastGenOutput>HighScores.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="HighScoresdb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HighScoresdb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HighScoresdb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HighScoresdb.edmx</DependentUpon>
+      <LastGenOutput>HighScoresdb.Context.cs</LastGenOutput>
+    </None>
+    <None Include="HighScoresdb.edmx.diagram">
+      <DependentUpon>HighScoresdb.edmx</DependentUpon>
+    </None>
+    <None Include="HighScoresdb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HighScoresdb.edmx</DependentUpon>
+      <LastGenOutput>HighScoresdb.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
